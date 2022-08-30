@@ -13,13 +13,15 @@ library(dplyr)
 # Model 1. Main logistic regression model predicting fetal loss.
 #############################################################################################################################
 
-# run model
-m1 <- glmmTMB(, data=data, family="binomial")
+# code pregnancy outcome (live birth or fetal loss) as a binary variable where fetal loss=1 and live birth=0
+data$pregnancy_outcome2 <- as.factor(ifelse(data$pregnancy_outcome=="live_birth", 0, 1))
+
+# run model (note that I(variable^2) codes for the quadratic transformation of the variable in the model)
+m1 <- glmmTMB(pregnancy_outcome2 ~ genome_wide_anubis_ancestry + I(genome_wide_anubis_ancestry^2)  +  female_age_conception + I(female_age_conception^2) + previous_fetal_losses + female_ordinal_rank_conception + group_size_females_conception + temp_max_2months_conception + temp_max_2months_endpreg +   rainfall_5months_conception + rainfall_5months_endpreg +  habitat_quality + (1|female_id), family=binomial, data=data)
 
 # look at model output
 summary(m1)
-m1_betas <- fixef(m1)$cond # get betas (effect estimates) for intercept and predictor variables 
-round(m1_betas, 3) # effect estimates reported in Table 1  
+write.csv(round(summary(m1)$coefficients$cond, 3), "table_1_results.csv") # results reported in Table 1  
 
 
 #############################################################################################################################
@@ -37,8 +39,7 @@ m_s1 <- glmmTMB(, data=tmp, family="binomial")
 
 # look at model output
 summary(m_s1)
-m_s1_betas <- fixef(m_s1)$cond # get betas (effect estimates) for intercept and predictor variables 
-round(m_s1_betas, 3) # effect estimates reported in Table S1  
+write.csv(round(summary(m_s1)$coefficients$cond, 3), "table_s1_results.csv") # results reported in Table S1  
 
 rm(tmp)
 
@@ -51,8 +52,7 @@ m_s2 <- glmmTMB(, data=data, family="binomial")
 
 # look at model output
 summary(m_s2)
-m_s2_betas <- fixef(m_s2)$cond # get betas (effect estimates) for intercept and predictor variables 
-round(m_s2_betas, 3) # effect estimates reported in Table S3
+write.csv(round(summary(m_s2)$coefficients$cond, 3), "table_s3_results.csv") # results reported in Table S3  
 
 
 #############################################################################################################################
@@ -77,8 +77,7 @@ m_s3 <- glmmTMB(, data=tmp2, family="binomial")
 
 # look at model output
 summary(m_s3)
-m_s3_betas <- fixef(m_s3)$cond # get betas (effect estimates) for intercept and predictor variables 
-round(m_s3_betas, 3) # effect estimates reported in Table S4
+write.csv(round(summary(m_s3)$coefficients$cond, 3), "table_s4_results.csv") # results reported in Table S4  
 
 rm(tmp, tmp2)
 
@@ -97,6 +96,5 @@ m_s4 <- glmmTMB(, data=tmp, family="binomial")
 
 # look at model output
 summary(m_s4)
-m_s4_betas <- fixef(m_s4)$cond # get betas (effect estimates) for intercept and predictor variables 
-round(m_s4_betas, 3) # effect estimates reported in Table S5
+write.csv(round(summary(m_s4)$coefficients$cond, 3), "table_s5_results.csv") # results reported in Table S5  
 
