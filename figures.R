@@ -35,7 +35,8 @@ ggsave("fig2.png")
 #############################################################################################################################
 
 # Need to run original logistic regression model for some of the figure making
-ARIELLE MODEL
+# code pregnancy outcome (live birth or fetal loss) as a binary variable where fetal loss=1 and live birth=0
+data$pregnancy_outcome2 <- as.factor(ifelse(data$pregnancy_outcome=="live_birth", 0, 1))
 
 ####################
 # Fig. 3A
