@@ -3,7 +3,7 @@
 # Script for running logistic regression models predicting fetal loss
 
 # Load the data in Table S6
-data <- read.csv("groom_anonymized.csv", header=T) 
+data <- read.csv("TableS6", header=T) 
 
 # Load R libraries
 library(glmmTMB)
