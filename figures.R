@@ -134,7 +134,7 @@ fig3d <- ggplot(data=data)+geom_bar(aes(habitat_quality, fill=relevel(pregnancy_
 # Fig. 3A-D
 ####################
 
-# Combine main panel 3A with panels 3B, 3C, 3D)
+# Combine main panel 3A with panels 3B, 3C, 3D
 (fig3a | (fig3b + theme(plot.margin = unit(c(0,40,0,0), "pt"))) / (fig3d + theme(plot.margin = unit(c(0,40,0,0), "pt"))) / (fig3b + theme(plot.margin = unit(c(0,40,0,0), "pt"))))  + plot_annotation(tag_levels = 'A') + plot_layout(widths = c(1.2, 1))
 
 ggsave("fig3A-D.pdf", height=12, width=16)
