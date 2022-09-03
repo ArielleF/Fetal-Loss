@@ -7,7 +7,7 @@
 1. ***logistic_regression_models.R***: script for running the multivariate logistic regression model predicting fetal loss.
 2. ***figures.R***: script for making main text and appendix figures.
 
-Data from this paper and used in these scripts are available in Table S6. 
+Data from this paper and used in these scripts are available in Table S4. 
 
 For script-related questions, please email Arielle Fogel at <afogel29@gmail.com>.
 
