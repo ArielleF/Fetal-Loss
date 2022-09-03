@@ -72,7 +72,7 @@ write.csv(round(summary(m_s2)$coefficients$cond, 3), "table_s3_results.csv") # r
 #############################################################################################################################
 
 # Exclude pregnancies that were high confidence or possible feticides based on Zipple et al. 2017 Proc Biol Sci, 284(1847) (doi:10.1098/rspb.2016.2561)
-tmp <- data[data$high_confidence_feticide!="Yes" & data$possible_feticide!="Yes" & data$overlapping_Zipple_et_al_2017=="Yes",]
+tmp <- data[data$high_confidence_feticide!="Yes" & data$possible_feticide!="Yes",]
 
 nrow(tmp) # n=1,012 pregnancies
 nrow(distinct(tmp, female_id)) # n=175 unique females
