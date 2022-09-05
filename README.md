@@ -3,7 +3,7 @@
 
 # Ecology and age, but not genetic ancestry, predict fetal loss in a wild baboon hybrid zone (Fogel, Oduor, et al. 2022, *bioRxiv*)
 
-### This repository includes R code for recreating the analyses and figures from Fogel, Oduor et al. 2022, *bioRxiv*(https://www.biorxiv.org/content/10.1101/2022.09.03.505836v1). These scripts include:
+### This repository includes R code for recreating the analyses and figures from Fogel, Oduor et al. 2022, *bioRxiv* (https://www.biorxiv.org/content/10.1101/2022.09.03.505836v1). These scripts include:
 1. ***logistic_regression_models.R***: script for running the multivariate logistic regression model predicting fetal loss.
 2. ***figures.R***: script for making main text and appendix figures.
 
