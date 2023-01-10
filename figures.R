@@ -2,8 +2,8 @@
 
 # Scripts for producing Figures 1-3 and S1
 
-# Load the data in Table S4
-data <- read.csv("TableS4.csv", header=T) 
+# Load the data in Table S6
+data <- read.csv("TableS6.csv", header=T) 
 
 # Load R libraries
 library(ggplot2)
