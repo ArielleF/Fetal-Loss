@@ -83,7 +83,7 @@ m_s3 <- glmmTMB(pregnancy_outcome2 ~ genome_wide_anubis_ancestry + I(genome_wide
 
 # look at model output
 summary(m_s3)
-write.csv(round(summary(m_s3)$coefficients$cond, 3), "table_s5_results.csv") # results reported in Table S4  
+write.csv(round(summary(m_s3)$coefficients$cond, 3), "table_s4_results.csv") # results reported in Table S4  
 
 rm(tmp)
 
@@ -102,7 +102,7 @@ m_s4 <- glmmTMB(pregnancy_outcome2 ~ hybrid_status  +  female_age_conception + I
 
 # look at model output
 summary(m_s4)
-write.csv(round(summary(m_s4)$coefficients$cond, 3), "table_s6_results.csv") # results reported in Table S5 
+write.csv(round(summary(m_s4)$coefficients$cond, 3), "table_s5_results.csv") # results reported in Table S5 
             
 rm(tmp)
 
