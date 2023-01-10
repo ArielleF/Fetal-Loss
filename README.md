@@ -1,13 +1,13 @@
 ![Amboseli baboon mother and offspring](https://user-images.githubusercontent.com/21341857/187446606-67607df1-cb23-4d99-adf6-c3c4ef5fbac5.JPG)
 <sup>*A baboon mother and her offspring in the Amboseli basin of southern Kenya. Photograph by Arielle Fogel*</sup>
 
-# Ecology and age, but not genetic ancestry, predict fetal loss in a wild baboon hybrid zone (Fogel, Oduor, et al. 2022, *bioRxiv*)
+# Ecology and age, but not genetic ancestry, predict fetal loss in a wild baboon hybrid zone (Fogel, Oduor, et al. 2023, *American Journal of Biological Anthropology*)
 
-### This repository includes R code for recreating the analyses and figures from Fogel, Oduor et al. 2022, *bioRxiv* (https://www.biorxiv.org/content/10.1101/2022.09.03.505836v1). These scripts include:
+### This repository includes R code for recreating the analyses and figures from Fogel, Oduor et al. 2023, *American Journal of Biological Anthropology* (doi:10.1002/ajpa.24686). These scripts include:
 1. ***logistic_regression_models.R***: script for running the multivariate logistic regression model predicting fetal loss.
 2. ***figures.R***: script for making main text and appendix figures.
 
-Data from this paper and used in these scripts are available in Table S4. 
+Data from this paper and used in these scripts are available in Table S6. 
 
 For script-related questions, please email Arielle Fogel at <afogel29@gmail.com>.
 
